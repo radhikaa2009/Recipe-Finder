@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Recipe Results</title>
+
+    <link rel="stylesheet" href="style.css">
+
+</head>
+
+
+<body>
+
+    <!-- Navigation -->
+
+    <nav class="navbar">
+
+        <div class="logo">
+            🍴 RecipeFinder
+        </div>
+
+        <div class="nav-links">
+
+            <a href="index.html">Home</a>
+
+            <a href="recipes.html">Recipes</a>
+
+            <a href="favourites.html">♡ Favourites</a>
+
+        </div>
+
+    </nav>
+
+
+    <!-- Results Header -->
+
+    <section class="results-header">
+
+        <p class="section-label">
+            SEARCH RESULTS
+        </p>
+
+        <h1 id="resultsTitle">
+            Discover Recipes
+        </h1>
+
+        <p id="resultsSubtitle">
+            Explore delicious recipes
+        </p>
+
+    </section>
+
+
+    <!-- Search Again -->
+
+    <div class="results-search">
+
+        <input
+            type="text"
+            id="resultsSearchInput"
+            placeholder="Search for another recipe..."
+        >
+
+        <button onclick="searchFromResults()">
+            Search
+        </button>
+
+    </div>
+
+
+    <!-- Message -->
+
+    <p id="message"></p>
+
+
+    <!-- Recipe Cards -->
+
+    <section class="section">
+
+        <div id="recipeContainer"></div>
+
+    </section>
+
+
+   <script src="./recipes.js"></script>
+<script src="./script.js"></script>
+
+</body>
+
+</html>

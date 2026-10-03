@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Recipe Finder</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <!-- Navigation -->
+
+    <nav class="navbar">
+
+        <div class="logo">
+            🍴 RecipeFinder
+        </div>
+
+        <div class="nav-links">
+            <a href="#">Home</a>
+            <a href="#cuisines">Cuisines</a>
+            <a href="#recipes">Recipes</a>
+            <a href="favourites.html">♡ Favourites</a>
+        </div>
+
+    </nav>
+
+
+    <!-- Hero Section -->
+
+    <section class="hero">
+
+        <div class="hero-content">
+
+            <p class="small-title">
+                DISCOVER • COOK • ENJOY
+            </p>
+
+            <h1>
+                Find something<br>
+                delicious today.
+            </h1>
+
+            <p class="hero-text">
+                Search recipes by name, ingredient or cuisine
+                and discover your next favourite meal.
+            </p>
+
+
+            <div class="search-box">
+
+                <span>🔍</span>
+
+                <input
+                    type="text"
+                    id="searchInput"
+                    placeholder="Search for a recipe..."
+                >
+
+                <button onclick="goToResults()">
+                Search
+</button>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- Cuisine Section -->
+
+    <section class="section" id="cuisines">
+
+        <div class="section-heading">
+
+            <div>
+                <p class="section-label">EXPLORE</p>
+
+                <h2>
+                    Browse by cuisine
+                </h2>
+            </div>
+
+        </div>
+
+
+        <div class="cuisine-container">
+
+            <button class="cuisine-card" onclick="searchCuisine('Indian')">
+    🇮🇳 <span>Indian</span>
+</button>
+
+<button class="cuisine-card" onclick="searchCuisine('Maharashtrian')">
+    🥘 <span>Maharashtrian</span>
+</button>
+<button class="cuisine-card" onclick="searchCuisine('South Indian')">
+    🍛 <span>South Indian</span>
+</button>
+
+<button class="cuisine-card" onclick="searchCuisine('Italian')">
+    🍝 <span>Italian</span>
+</button>
+
+<button class="cuisine-card" onclick="searchCuisine('Mexican')">
+    🌮 <span>Mexican</span>
+</button>
+
+<button class="cuisine-card" onclick="searchCuisine('Desserts')">
+    🍰 <span>Desserts</span>
+</button>
+
+        </div>
+
+    </section>
+
+
+    <!-- Recipe Results -->
+
+    <section class="section" id="recipes">
+
+        <div class="section-heading">
+
+            <div>
+
+                <p class="section-label">
+                    RECIPES
+                </p>
+
+                <h2>
+                    Discover delicious recipes
+                </h2>
+
+            </div>
+
+        </div>
+
+
+        <p id="message"></p>
+
+        <div id="recipeContainer"></div>
+
+    </section>
+
+
+    <footer>
+
+        <h3>🍴 RecipeFinder</h3>
+
+        <p>
+            Discover recipes, explore cuisines and cook something delicious.
+        </p>
+
+        <p class="copyright">
+            Web Technologies Micro Project • Government Polytechnic, Pune
+        </p>
+
+    </footer>
+
+
+    <script src="script.js"></script>
+
+</body>
+
+</html>
