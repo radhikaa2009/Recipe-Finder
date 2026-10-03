@@ -1842,5 +1842,286 @@ const localRecipes = [
         "Cook for a few minutes and serve hot."
     ]
 },
+{
+    id: "dessert01",
+    name: "Gulab Jamun",
+    cookingTime: "30 mins",
+    category: "Desserts",
+    cuisine: "Indian",
+    image: "https://dineout-media-assets.swiggy.com/swiggy/image/upload/fl_lossy%2Cf_auto%2Cq_auto%2Cw_600%2Ch_468/v1669927227/e5804a230a58159204a3def3b46050c9.jpg",
+    ingredients: [
+        "1 cup milk powder",
+        "2 tbsp all-purpose flour",
+        "2 tbsp milk",
+        "1 tbsp ghee",
+        "1 cup sugar",
+        "1 cup water",
+        "2 cardamom pods",
+        "Oil or ghee for frying"
+    ],
+    instructions: [
+        "Mix milk powder, flour and ghee.",
+        "Add milk little by little and make a soft dough.",
+        "Make small smooth balls from the dough.",
+        "Heat oil or ghee and fry the balls until golden brown.",
+        "Prepare sugar syrup with sugar, water and cardamom.",
+        "Soak the fried gulab jamuns in warm syrup for 15 to 20 minutes.",
+        "Serve warm."
+    ]
+},
+
+{
+    id: "dessert02",
+    name: "Rasmalai",
+    cookingTime: "45 mins",
+    category: "Desserts",
+    cuisine: "Indian",
+    image: "https://dineout-media-assets.swiggy.com/swiggy/image/upload/fl_lossy%2Cf_auto%2Cq_auto%2Cw_600%2Ch_468/DINEOUT_ALL_RESTAURANTS/IMAGES/RESTAURANT_IMAGE_SERVICE/2026/3/21/1f3fa657-74fe-4d66-978a-68fb394dcbd4_BUN00639ec8b79b7d73c4ea79a5ee8c6c54a821e.JPG",
+    ingredients: [
+        "1 litre full-fat milk",
+        "2 tbsp lemon juice",
+        "1 cup sugar",
+        "4 cups water",
+        "4 cardamom pods",
+        "2 tbsp chopped pistachios",
+        "A few saffron strands"
+    ],
+    instructions: [
+        "Boil the milk and add lemon juice to curdle it.",
+        "Strain the chenna and wash it with water.",
+        "Knead the chenna until smooth.",
+        "Make small flat balls.",
+        "Cook them in boiling sugar syrup until they become soft.",
+        "Boil another batch of milk until slightly thick.",
+        "Add sugar, cardamom and saffron.",
+        "Add the cooked chenna pieces to the thickened milk.",
+        "Garnish with pistachios and serve chilled."
+    ]
+},
+
+{
+    id: "dessert03",
+    name: "Jalebi",
+    cookingTime: "35 mins",
+    category: "Desserts",
+    cuisine: "Indian",
+    image: "https://lscdn.azureedge.net/biz-live/img/11789592-11789592-8f3ceab2.jpeg",
+    ingredients: [
+        "1 cup all-purpose flour",
+        "2 tbsp corn flour",
+        "1/2 cup curd",
+        "1 cup sugar",
+        "1/2 cup water",
+        "A pinch of saffron",
+        "Oil or ghee for frying"
+    ],
+    instructions: [
+        "Mix flour, corn flour and curd to make a smooth batter.",
+        "Rest the batter for a few hours.",
+        "Prepare sugar syrup with sugar, water and saffron.",
+        "Heat oil or ghee in a pan.",
+        "Pour the batter into a piping bag.",
+        "Make spiral shapes directly into the hot oil.",
+        "Fry until crisp and golden.",
+        "Dip the jalebi in warm sugar syrup.",
+        "Serve hot."
+    ]
+},
+
+{
+    id: "dessert04",
+    name: "Gajar Halwa",
+    cookingTime: "50 mins",
+    category: "Desserts",
+    cuisine: "Indian",
+    image: "https://cdn.prod.website-files.com/655daef7b0404cc1bd31bd76/656f714a3358fccee83cd834_gajar-halwa.jpg",
+    ingredients: [
+        "500 g carrots",
+        "500 ml full-fat milk",
+        "1/2 cup sugar",
+        "2 tbsp ghee",
+        "1/4 tsp cardamom powder",
+        "2 tbsp chopped cashews",
+        "2 tbsp raisins"
+    ],
+    instructions: [
+        "Wash, peel and grate the carrots.",
+        "Cook the grated carrots with milk in a heavy pan.",
+        "Cook until the milk is mostly absorbed.",
+        "Add sugar and continue cooking.",
+        "Add ghee and cardamom powder.",
+        "Cook until the halwa becomes thick and glossy.",
+        "Add cashews and raisins.",
+        "Serve warm."
+    ]
+},
+
+{
+    id: "dessert05",
+    name: "Kheer",
+    cookingTime: "40 mins",
+    category: "Desserts",
+    cuisine: "Indian",
+    image: "https://patelsfood.nl/objects/menu-items/00d6f94f-be2b-46f0-b5be-8792dafc950e",
+    ingredients: [
+        "1/4 cup basmati rice",
+        "1 litre full-fat milk",
+        "1/3 cup sugar",
+        "4 cardamom pods",
+        "2 tbsp chopped almonds",
+        "2 tbsp chopped pistachios",
+        "A few saffron strands"
+    ],
+    instructions: [
+        "Wash and soak the rice for 15 minutes.",
+        "Boil the milk in a heavy pan.",
+        "Add the soaked rice.",
+        "Cook on low heat until the rice becomes soft.",
+        "Add sugar and cardamom.",
+        "Cook until the kheer becomes creamy.",
+        "Add saffron and chopped nuts.",
+        "Serve warm or chilled."
+    ]
+},
+
+{
+    id: "dessert06",
+    name: "Falooda",
+    cookingTime: "25 mins",
+    category: "Desserts",
+    cuisine: "Indian",
+    image: "https://clykwuzajtwvwuavmtzs.supabase.co/storage/v1/object/public/menu-images/smoothies/falooda_bombay_1774787609691.png",
+    ingredients: [
+        "2 tbsp falooda sev",
+        "1 tbsp basil seeds",
+        "2 cups chilled milk",
+        "2 tbsp rose syrup",
+        "2 scoops vanilla or kulfi ice cream",
+        "1 tbsp chopped nuts",
+        "1 tbsp sugar"
+    ],
+    instructions: [
+        "Soak basil seeds in water for 10 minutes.",
+        "Boil the falooda sev and drain it.",
+        "Mix chilled milk with sugar and rose syrup.",
+        "Add soaked basil seeds and falooda sev.",
+        "Pour the mixture into a tall glass.",
+        "Top with ice cream or kulfi.",
+        "Garnish with chopped nuts.",
+        "Serve chilled."
+    ]
+},
+
+{
+    id: "dessert07",
+    name: "Kulfi",
+    cookingTime: "35 mins",
+    category: "Desserts",
+    cuisine: "Indian",
+    image: "https://www.veeraswamy.com/media/ue3byo1f/veeraswamy_best-mothers-day-fine-dining-restaurant-london_indian-cuisine.jpg",
+    ingredients: [
+        "1 litre full-fat milk",
+        "1/3 cup sugar",
+        "1/4 cup milk powder",
+        "1/2 tsp cardamom powder",
+        "2 tbsp chopped pistachios",
+        "A few saffron strands"
+    ],
+    instructions: [
+        "Boil the milk in a heavy pan.",
+        "Cook on low heat until it reduces.",
+        "Add milk powder and sugar.",
+        "Stir continuously until the mixture thickens.",
+        "Add cardamom, saffron and pistachios.",
+        "Allow the mixture to cool.",
+        "Pour into kulfi moulds.",
+        "Freeze until completely set.",
+        "Serve chilled."
+    ]
+},
+
+{
+    id: "dessert08",
+    name: "Rasgulla",
+    cookingTime: "40 mins",
+    category: "Desserts",
+    cuisine: "Indian",
+    image: "https://restaurantindia.s3.ap-south-1.amazonaws.com/s3fs-public/inline-images/Tandoori%20Rasgulla%203.jpg",
+    ingredients: [
+        "1 litre full-fat milk",
+        "2 tbsp lemon juice",
+        "1 cup sugar",
+        "4 cups water",
+        "2 cardamom pods"
+    ],
+    instructions: [
+        "Boil the milk and add lemon juice.",
+        "Strain the curdled milk to make chenna.",
+        "Wash and drain the chenna.",
+        "Knead until smooth.",
+        "Make small smooth balls.",
+        "Boil sugar and water to prepare syrup.",
+        "Add the chenna balls to the boiling syrup.",
+        "Cover and cook until they become soft and spongy.",
+        "Cool and serve."
+    ]
+},
+
+{
+    id: "dessert09",
+    name: "Kaju Katli",
+    cookingTime: "30 mins",
+    category: "Desserts",
+    cuisine: "Indian",
+    image: "https://estaasweets.com/cdn/shop/files/Kajukatli-EstaaSweets-Bangalore.webp?v=1753894347",
+    ingredients: [
+        "1 cup cashew nuts",
+        "1/2 cup sugar",
+        "1/4 cup water",
+        "1/2 tsp cardamom powder",
+        "1 tsp ghee",
+        "Silver leaf for decoration"
+    ],
+    instructions: [
+        "Grind the cashews into a fine powder.",
+        "Heat sugar and water to make a syrup.",
+        "Add the cashew powder to the syrup.",
+        "Cook on low heat while stirring continuously.",
+        "Add ghee and cardamom powder.",
+        "Cook until the mixture forms a soft dough.",
+        "Roll the dough between sheets of butter paper.",
+        "Cut into diamond shapes.",
+        "Decorate with silver leaf and serve."
+    ]
+},
+
+{
+    id: "dessert10",
+    name: "Shahi Tukda",
+    cookingTime: "35 mins",
+    category: "Desserts",
+    cuisine: "Indian",
+    image: "https://img-cdn.publive.online/fit-in/1200x675/sanjeev-kapoor/media/post_banners/a29a474064974577d8ab445cb857846db2d032decf2199bce9c147856b5a57d8.jpg",
+    ingredients: [
+        "4 bread slices",
+        "500 ml full-fat milk",
+        "1/3 cup sugar",
+        "2 tbsp ghee",
+        "2 tbsp chopped almonds",
+        "2 tbsp chopped pistachios",
+        "1/2 tsp cardamom powder",
+        "A few saffron strands"
+    ],
+    instructions: [
+        "Cut the bread slices into triangles.",
+        "Toast or fry the bread in ghee until golden.",
+        "Boil the milk until it becomes slightly thick.",
+        "Add sugar, saffron and cardamom.",
+        "Place the fried bread pieces on a serving plate.",
+        "Pour the thickened milk over the bread.",
+        "Garnish with almonds and pistachios.",
+        "Serve warm or chilled."
+    ]
+},
 ];
 
