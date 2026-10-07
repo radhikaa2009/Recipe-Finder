@@ -1,0 +1,422 @@
+<!DOCTYPE html>
+<html lang="en">
+<head> <link rel="stylesheet" href="admin.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Admin Dashboard | Recipe Finder</title>
+
+    <link rel="stylesheet" href="admin.css">
+</head>
+
+<body>
+
+    <!-- ================= LOGIN PAGE ================= -->
+
+    <div id="loginSection" class="login-page">
+
+        <div class="login-card">
+
+            <div class="brand-mark">🍳</div>
+
+            <p class="eyebrow">RECIPE FINDER</p>
+
+            <h1>Admin Login</h1>
+
+            <p class="muted">
+                Manage recipes from your dashboard.
+            </p>
+
+            <label>Username</label>
+
+            <input
+                type="text"
+                id="username"
+                placeholder="Enter username"
+            >
+
+            <label>Password</label>
+
+            <input
+                type="password"
+                id="password"
+                placeholder="Enter password"
+            >
+
+            <button
+                class="primary-btn full"
+                onclick="adminLogin()"
+            >
+                Login to Dashboard
+            </button>
+
+            <p id="loginMessage" class="error"></p>
+
+            <a href="index.html" class="back-link">
+                ← Back to Recipe Finder
+            </a>
+
+        </div>
+
+    </div>
+
+
+    <!-- ================= ADMIN DASHBOARD ================= -->
+
+    <div
+        id="adminPanel"
+        class="dashboard"
+        style="display:none;"
+    >
+
+        <!-- SIDEBAR -->
+
+        <aside class="sidebar">
+
+            <div class="logo">
+
+                <span>🍳</span>
+
+                <div>
+
+                    <strong>Recipe Finder</strong>
+
+                    <small>ADMIN PANEL</small>
+
+                </div>
+
+            </div>
+
+
+            <div class="side-menu">
+
+                <div class="menu-item active">
+                    ▦ &nbsp; Dashboard
+                </div>
+
+                <div class="menu-item">
+                    🍴 &nbsp; Manage Recipes
+                </div>
+
+            </div>
+
+
+            <div class="sidebar-bottom">
+
+                <a href="index.html">
+                    ← View Website
+                </a>
+
+                <button onclick="adminLogout()">
+                    Logout
+                </button>
+
+            </div>
+
+        </aside>
+
+
+        <!-- MAIN CONTENT -->
+
+        <main class="main-content">
+
+            <header class="topbar">
+
+                <div>
+
+                    <p class="eyebrow">
+                        ADMINISTRATION
+                    </p>
+
+                    <h1>
+                        Recipe Dashboard
+                    </h1>
+
+                    <p class="muted">
+                        Create, view, update and delete recipes.
+                    </p>
+
+                </div>
+
+                <div class="admin-badge">
+                    ● Admin
+                </div>
+
+            </header>
+
+
+            <!-- STATISTICS -->
+
+            <section class="stats">
+
+                <div class="stat-card">
+
+                    <div class="stat-icon">
+                        🍽️
+                    </div>
+
+                    <div>
+
+                        <span>Total Recipes</span>
+
+                        <strong id="recipeCount">
+                            0
+                        </strong>
+
+                    </div>
+
+                </div>
+
+
+                <div class="stat-card">
+
+                    <div class="stat-icon">
+                        ➕
+                    </div>
+
+                    <div>
+
+                        <span>CRUD Status</span>
+
+                        <strong>
+                            Active
+                        </strong>
+
+                    </div>
+
+                </div>
+
+
+                <div class="stat-card">
+
+                    <div class="stat-icon">
+                        💾
+                    </div>
+
+                    <div>
+
+                        <span>Storage</span>
+
+                        <strong>
+                            Local
+                        </strong>
+
+                    </div>
+
+                </div>
+
+            </section>
+
+
+            <!-- CONTENT -->
+
+            <section class="content-grid">
+
+
+                <!-- ADD / UPDATE FORM -->
+
+                <div class="form-card">
+
+                    <div class="card-heading">
+
+                        <div>
+
+                            <p class="eyebrow">
+                                RECIPE MANAGEMENT
+                            </p>
+
+                            <h2 id="formTitle">
+                                Add New Recipe
+                            </h2>
+
+                        </div>
+
+                        <span
+                            class="crud-pill"
+                            id="modePill"
+                        >
+                            CREATE
+                        </span>
+
+                    </div>
+
+
+                    <div class="form-grid">
+
+
+                        <div class="field full-field">
+
+                            <label>
+                                Recipe Name
+                            </label>
+
+                            <input
+                                type="text"
+                                id="recipeName"
+                                placeholder="e.g. Paneer Tikka"
+                            >
+
+                        </div>
+
+
+                        <div class="field">
+
+                            <label>
+                                Category
+                            </label>
+
+                            <input
+                                type="text"
+                                id="category"
+                                placeholder="Main Course"
+                            >
+
+                        </div>
+
+
+                        <div class="field">
+
+                            <label>
+                                Cuisine
+                            </label>
+
+                            <input
+                                type="text"
+                                id="cuisine"
+                                placeholder="Indian"
+                            >
+
+                        </div>
+
+
+                        <div class="field">
+
+                            <label>
+                                Cooking Time
+                            </label>
+
+                            <input
+                                type="text"
+                                id="time"
+                                placeholder="30 minutes"
+                            >
+
+                        </div>
+
+
+                        <div class="field">
+
+                            <label>
+                                Image URL
+                            </label>
+
+                            <input
+                                type="text"
+                                id="image"
+                                placeholder="https://..."
+                            >
+
+                        </div>
+
+
+                        <div class="field full-field">
+
+                            <label>
+                                Ingredients
+                            </label>
+
+                            <textarea
+                                id="ingredients"
+                                placeholder="Paneer, Curd, Onion, Capsicum, Spices"
+                            ></textarea>
+
+                            <small>
+                                Separate ingredients using commas.
+                            </small>
+
+                        </div>
+
+
+                        <div class="field full-field">
+
+                            <label>
+                                Instructions
+                            </label>
+
+                            <textarea
+                                id="instructions"
+                                placeholder="Write the recipe steps here..."
+                            ></textarea>
+
+                        </div>
+
+                    </div>
+
+
+                    <div class="form-actions">
+
+                        <button
+                            class="primary-btn"
+                            onclick="saveRecipe()"
+                            id="saveBtn"
+                        >
+                            ＋ Add Recipe
+                        </button>
+
+                        <button
+                            class="secondary-btn"
+                            onclick="clearForm()"
+                        >
+                            Clear
+                        </button>
+
+                    </div>
+
+                </div>
+
+
+                <!-- MANAGE RECIPES -->
+
+                <div class="manage-card">
+
+                    <div class="card-heading">
+
+                        <div>
+
+                            <p class="eyebrow">
+                                DATABASE
+                            </p>
+
+                            <h2>
+                                Manage Recipes
+                            </h2>
+
+                        </div>
+
+                        <span class="read-pill">
+                            READ
+                        </span>
+
+                    </div>
+
+
+                    <div
+                        id="recipeList"
+                        class="recipe-list"
+                    ></div>
+
+                </div>
+
+            </section>
+
+        </main>
+
+    </div>
+
+
+    <!-- JAVASCRIPT -->
+
+    <script src="admin.js"></script>
+
+</body>
+</html>
