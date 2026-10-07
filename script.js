@@ -1,3 +1,21 @@
+// =========================
+// ADMIN + LOCAL RECIPES
+// =========================
+
+function getAdminRecipes() {
+    return JSON.parse(
+        localStorage.getItem("adminRecipes")
+    ) || [];
+}
+
+function getAllRecipes() {
+    return [
+        ...localRecipes,
+        ...getAdminRecipes()
+    ];
+}
+
+
 async function searchRecipes() {
 
     const searchInput = document.getElementById("searchInput");
@@ -14,8 +32,7 @@ async function searchRecipes() {
 
     message.textContent = "Finding delicious recipes...";
     recipeContainer.innerHTML = "";
-message.textContent = "TESTING";
-return;
+
 
     try {
 
@@ -202,7 +219,7 @@ async function loadResultsPage() {
 
     /* LOCAL RECIPES */
 
-    const localResults = localRecipes.filter(recipe =>
+    const localResults = getAllRecipes().filter(recipe =>
     recipe.name.toLowerCase().includes(searchText.toLowerCase()) ||
     recipe.category.toLowerCase().includes(searchText.toLowerCase()) ||
     recipe.cuisine.toLowerCase().includes(searchText.toLowerCase()) ||
@@ -229,7 +246,11 @@ async function loadResultsPage() {
             </p>
 
             <button
-    onclick="openLocalRecipe('${recipe.id}')"
+    onclick="${
+        typeof recipe.id === "number"
+            ? `openAdminRecipe('${recipe.id}')`
+            : `openLocalRecipe('${recipe.id}')`
+    }"
 >
     View Recipe
 </button>
@@ -402,6 +423,12 @@ function openLocalRecipe(recipeId) {
         "recipe.html?type=local&id=" +
         encodeURIComponent(recipeId);
 }
+function openAdminRecipe(recipeId) {
+
+    window.location.href =
+        "recipe.html?type=admin&id=" +
+        encodeURIComponent(recipeId);
+}
 
 
 function openApiRecipe(mealId) {
@@ -524,10 +551,129 @@ async function loadRecipeDetails() {
         return;
     }
 
+/* =========================
+   ADMIN RECIPE
+========================= */
 
+if (type === "admin") {
+
+    const adminRecipes =
+        JSON.parse(
+            localStorage.getItem("adminRecipes")
+        ) || [];
+
+    const recipe =
+        adminRecipes.find(
+            item => String(item.id) === String(id)
+        );
+
+    if (!recipe) {
+
+        message.textContent =
+            "Recipe not found.";
+
+        return;
+    }
+
+    message.textContent = "";
+
+    // Admin instructions are stored as text
+    const instructions =
+        Array.isArray(recipe.instructions)
+            ? recipe.instructions
+            : [recipe.instructions];
+
+    details.innerHTML = `
+
+        <div class="detail-card">
+
+            ${
+                recipe.image
+                ? `
+                    <img
+                        src="${recipe.image}"
+                        alt="${recipe.name}"
+                    >
+                  `
+                : ""
+            }
+
+            <div class="detail-content">
+
+                <p class="section-label">
+                    ${recipe.category || "RECIPE"}
+                </p>
+
+                <h1>
+                    ${recipe.name}
+                </h1>
+
+                <p class="recipe-cuisine">
+                    ${recipe.cuisine || "Indian"} Cuisine
+                </p>
+
+                <p class="recipe-cuisine">
+                    ⏱️ Cooking Time:
+                    ${recipe.time || "Not specified"}
+                </p>
+
+
+                <button
+                    class="favorite-btn"
+                    onclick="toggleFavorite('admin', '${recipe.id}')"
+                >
+                    ♡ Add to Favourites
+                </button>
+
+
+                <h2>
+                    Ingredients
+                </h2>
+
+                <ul>
+
+                    ${recipe.ingredients
+                        .map(
+                            item =>
+                            `<li>${item}</li>`
+                        )
+                        .join("")}
+
+                </ul>
+
+
+                <h2>
+                    Instructions
+                </h2>
+
+                <div class="instructions">
+
+                    <ol>
+
+                        ${instructions
+                            .map(
+                                step =>
+                                `<li>${step}</li>`
+                            )
+                            .join("")}
+
+                    </ol>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    `;
+
+    return;
+}
     /* =========================
        API RECIPE
     ========================= */
+
+
 
     if (type === "api") {
 
